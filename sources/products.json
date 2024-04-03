@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "stock":true,
+    "tipo": "Griego",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["frutas", "granola", "cereales"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Versatilidad en su consumo",
+      "Ayuda a mantener la sensación de saciedad"
+    ],
+    "imagen": "url_imagen_griego.jpg",
+    "descripcion": "Es un producto lácteo espeso y cremoso, con un sabor suave y ligeramente ácido. Se caracteriza por ser alto en proteínas y bajo en grasas. Es una excelente fuente de calcio y contiene probióticos que benefician la salud intestinal."
+  },
+  {
+    "id": 2,
+    "stock":false,
+    "tipo": "Búlgaro",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["miel", "frutos secos"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_bulgaro.jpg",
+    "descripcion": "Es un tipo de yogur espeso y cremoso, con un sabor característico debido a la cultura de fermentación utilizada. Es rico en proteínas y bajo en grasas, y contiene probióticos beneficiosos para la salud digestiva."
+  },
+  {
+    "id": 3,
+    "stock":false,
+    "tipo": "Islandés",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["miel", "frutas"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_islandes.jpg",
+    "descripcion": "También conocido como skyr, es un yogur espeso y cremoso originario de Islandia. Se hace colando el yogur para eliminar el suero, lo que le da una textura densa. Es rico en proteínas y bajo en grasas, y suele consumirse con miel o frutas."
+  },
+  {
+    "id": 4,
+    "stock":true,
+    "tipo": "Turco",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["pepinillos", "aceitunas"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_turco.jpg",
+    "descripcion": "El yogur turco es un tipo de yogur espeso y cremoso muy popular en Turquía. Se consume tanto en versiones dulces como saladas. Es rico en proteínas y calcio, y contiene probióticos que benefician la salud intestinal."
+  },
+  {
+    "id": 5,
+    "stock":false,
+    "tipo": "Indio",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["especias", "frutas"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_indio.jpg",
+    "descripcion": "El yogur indio, también conocido como dahi, se hace fermentando la leche con una bacteria específica. Es un alimento versátil que se consume en la India como acompañamiento de platos salados, preparación de salsas y postres."
+  },
+  {
+    "id": 6,
+    "stock":true,
+    "tipo": "Francés",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["mermelada", "canela"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_frances.jpg",
+    "descripcion": "El yogur francés, es un yogur tradicional de Francia que puede variar en textura y sabor dependiendo de la región. Es rico en proteínas y calcio, y suele consumirse con mermelada o canela."
+  },
+  {
+    "id": 7,
+    "stock":false,
+    "tipo": "Australiano",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["miel", "frutas"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_australiano.jpg",
+    "descripcion": "El yogur australiano es similar al yogur griego pero con una textura más suave y cremosa. Es rico en proteínas y calcio, y suele consumirse con miel o frutas para mejorar su sabor."
+  },
+  {
+    "id": 8,
+    "stock":false,
+    "tipo": "Húngaro",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["chocolate", "frutas"],
+    "propiedades": [
+      "Alto contenido proteico", "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_hungaro.jpg",
+    "descripcion": "El yogur húngaro es un tipo de yogur espeso y cremoso que se caracteriza por tener una capa de chocolate en su interior. Es rico en proteínas y calcio, y suele consumirse como postre o merienda."
+  },
+  {
+    "id": 9,
+    "stock":false,
+    "tipo": "Mexicano",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["chile", "limón"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_mexicano.jpg",
+    "descripcion": "El yogur mexicano es una variedad de yogur muy popular en México, que puede tener diferentes sabores y consistencias. Se consume solo o como ingrediente en una variedad de platos y postres mexicanos."
+  },
+  {
+    "id": 10,
+    "stock":true,
+    "tipo": "Suizo",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": ["miel", "frutas"],
+    "propiedades": [
+      "Alto contenido proteico",
+      "Bajo en grasas",
+      "Fuente de calcio",
+      "Contiene probióticos",
+      "Ayuda a mejorar la digestión"
+    ],
+    "imagen": "url_imagen_suizo.jpg",
+    "descripcion": "El yogur suizo es un tipo de yogur muy cremoso y suave, que se diferencia por su proceso de fabricación que incluye el uso de leche fresca y nata. Es rico en proteínas y calcio, y suele consumirse con miel o frutas para darle sabor."
+  },
+  {
+    "id": 11,
+    "stock":true,
+    "tipo": "Natural",
+    "cantidad": {"medida": [200, 500, 1000],
+                "unidad": "gr"},
+    "adicionales": [],
+    "propiedades": [
+      "Fuente de calcio",
+      "Contiene probióticos"
+    ],
+    "imagen": "url_imagen_natural.jpg",
+    "descripcion": "El yogur natural es un producto lácteo sin aditivos ni sabores añadidos. Es una excelente fuente de calcio y contiene probióticos que benefician la salud intestinal. Puede consumirse solo o como base para salsas y aderezos."
+  }
+]
