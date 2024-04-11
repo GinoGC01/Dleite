@@ -18,6 +18,13 @@ export function CardYogurtType({
   return (
     <>
       <li className="cardtype-container" onClick={handleOpenCard}>
+        <span
+          className={
+            stock
+              ? "stock-bullet-on stock-bullet"
+              : "stock-bullet-off stock-bullet"
+          }
+        ></span>
         <strong className="title-card">{title}</strong>
         <span
           className={

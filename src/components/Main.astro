@@ -1,113 +1,145 @@
 ---
 import Header01 from "./Header-01.astro";
-import products from "../../sources/products.json"
-import {CardYogurtType} from "./CardYogurtType.jsx"
-import { prefetch } from "astro:prefetch";
+import products from "../../sources/products.json";
+import { CardYogurtType } from "./CardYogurtType.jsx";
+import ContactLi from "./ContactLi.astro";
+import contacts from "../../sources/contact.json";
 ---
 
 <main>
-    <Header01/>
-    <section class="presentation">
-        <!-- <img class="logo" src="../../public/logo.jpg" alt=""> -->
-        <img class="title-logo" src="../../../D’leite.png white.png" alt="">
-        <h1>Yogures naturales</h1>
-        <span class="logo">
-            <img src="../../public/logo.jpg" alt="">
-        </span>
-        <p>Descubre nuestro deliciosos mundo de Yogures naturales artesanales. Con variedades únicas, nuestro yogurt griego es nuestra especialidad. <strong>¡Conócenos y disfruta de una experiencia única en cada cucharada!</strong></p>
-        <h3>Tipos de yogures</h3>
-        <ul>
-            {
-                products?.map(product =>{
-                    return(
-                        <CardYogurtType 
-                        stock={product.stock}
-                        flag={product.flag}
-                        title={product.tipo} 
-                        descripcion={product.descripcion}
-                        cantidad={product.cantidad}
-                        adicionales={product.adicionales}
-                        client:visible />
-                    )
-                })
-            }
-        </ul>
-        
-    </section>
+  <Header01 />
+  <section class="presentation">
+    <!-- <img class="logo" src="../../public/logo.jpg" alt=""> -->
+    <img class="title-logo" src="../../../D’leite.png-white.png" alt="" />
+    <h1>Yogures naturales</h1>
+    <ul class="contact-socialmedia-container">
+      {
+        contacts.map(
+          (contact) =>
+            contact.online && (
+              <ContactLi
+                contact={contact}
+                width="1.5em"
+                height="1.5em"
+                color="none;"
+              />
+            )
+        )
+      }
+    </ul>
+    <span class="logo">
+      <img src="../../public/logo.jpg" alt="" />
+    </span>
+    <p>
+      Descubre nuestro deliciosos mundo de Yogures naturales artesanales. Con
+      variedades únicas, nuestro yogurt griego es nuestra especialidad. <strong
+        >¡Conócenos y disfruta de una experiencia única en cada cucharada!</strong
+      >
+    </p>
+    <h3>Tipos de yogures</h3>
+    <ul class="types-yogures">
+      {
+        products?.map((product) => {
+          return (
+            <CardYogurtType
+              stock={product.stock}
+              flag={product.flag}
+              title={product.tipo}
+              descripcion={product.descripcion}
+              cantidad={product.cantidad}
+              adicionales={product.adicionales}
+              client:visible
+            />
+          );
+        })
+      }
+    </ul>
+  </section>
 </main>
 
 <style>
-    main{
-        position: relative;
-    }
+  main {
+    position: relative;
+  }
 
-    main::before{
-        content: "";
-        position: absolute;
-        display: block;
-        height: 20em;
-        width: 100%;
-        background: linear-gradient(180deg, rgba(14,156,46,1) 0%, rgba(9,95,28,1) 100%);
-        border-radius: 0 0 35% 35%;
-    }
+  main::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 20em;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(14, 156, 46, 1) 0%,
+      rgba(9, 95, 28, 1) 100%
+    );
+    border-radius: 0 0 35% 35%;
+  }
 
-    .presentation{
-        position: relative;
-        display: flex;
-        gap: .6em;
-        flex-direction: column;
-        align-items: center;
-    }
+  .presentation {
+    position: relative;
+    display: flex;
+    gap: 0.6em;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    ul{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1em;
-    }
+  .types-yogures {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
 
-    .presentation > h1 {
-        font-weight: 200;
-        color: white;
-    }
+  .presentation > h1 {
+    font-weight: 200;
+    color: white;
+  }
 
-    .presentation > p{
-        margin-top: 10px;
-        text-align: center;
-        color: #022409;
-        padding: 0 .5em;
+  .presentation > p {
+    margin-top: 10px;
+    text-align: center;
+    color: #022409;
+    padding: 0 0.5em;
+  }
 
+  .presentation > h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #022409;
+  }
 
-    }
+  .contact-socialmedia-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+    gap: 0em;
+  }
 
-    .presentation > h3{
-        margin-top: 10px;
-        font-size: 1.5em;
-        font-weight: 600;
-        color: #022409
-    }
+  .title-logo {
+    width: 12em;
+  }
 
-    .title-logo {
-        width: 12em;
-    }
+  .logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 10px;
+    width: 6em;
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
 
-    .logo{   
-        position: relative;     
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        margin-top: 10px;
-        width: 6em;
-        height: 12em;
-        width: 12em;
-        border-radius: 50%;
-        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-    }
-
-    .logo > img{
-        width: 52%;
-        margin-left: 10px;
-    }
+  .logo > img {
+    width: 52%;
+    margin-left: 10px;
+  }
 </style>

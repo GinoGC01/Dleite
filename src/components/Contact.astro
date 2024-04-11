@@ -1,5 +1,43 @@
 ---
+import contacts from "../../sources/contact.json";
+import ContactLi from "./ContactLi.astro";
 ---
+
 <section>
-    <h2>Contact</h2>
+  <h2>Contacto</h2>
+  <p>Canales de contactos disponibles!</p>
+  <ul class="contact-socialmedia-container">
+    {
+      contacts.map(
+        (contact) =>
+          contact.online && (
+            <ContactLi
+              contact={contact}
+              width="2.5em"
+              height="2.5em"
+              color="#095214be"
+            />
+          )
+      )
+    }
+  </ul>
 </section>
+
+<style>
+  section > h2 {
+    padding: 7px;
+  }
+  section > p {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .contact-socialmedia-container {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+  }
+</style>

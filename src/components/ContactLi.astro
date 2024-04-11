@@ -1,0 +1,27 @@
+---
+const { contact, width, height, color } = Astro.props;
+---
+
+<li class="contact-socialmedia" id={`${contact.id}`}>
+  <a
+    href={contact.url}
+    style={`width:${width}; height:${height}; background-color: ${color};`}
+  >
+    <img src={contact.image2} alt={`${contact.socialNetwork} icon`} />
+  </a>
+</li>
+
+<style>
+  .contact-socialmedia > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .contact-socialmedia > a > img {
+    width: 60%;
+    object-fit: contain;
+    color: white;
+  }
+</style>

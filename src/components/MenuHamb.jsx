@@ -26,7 +26,7 @@ export function MenuHamb() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Blogs</a>
+            <a href="#">Blog</a>
           </li>
           <li>
             <a href="#">Políticas y términos</a>

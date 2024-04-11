@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "socialNetwork": "Facebook",
+    "userName": "Dleite - Yogures Naturales",
+    "online": true,
+    "contact": ["Messenger, mensaje directo"],
+    "image": "../public/contact/facebook.png",
+    "image2": "../public/contact/facebook-white.png",
+    "url": "#"
+  },
+  {
+    "id": 2,
+    "socialNetwork": "Instagram",
+    "userName": "Dleite - Yogures Naturales",
+    "online": false,
+    "contact": ["Messenger, mensaje directo"],
+    "image": "../public/contact/instagram.png",
+    "image2": "../public/contact/instagram-white.png"
+  },
+  {
+    "id": 3,
+    "socialNetwork": "WhatsApp",
+    "userName": "",
+    "online": true,
+    "contact": ["1140230671"],
+    "image": "../public/contact/whatsapp.png",
+    "image2": "../public/contact/whatsapp-white.png",
+    "url": "#"
+  },
+  {
+    "id": 4,
+    "socialNetwork": "Telegram",
+    "userName": "@dleiteNatural",
+    "online": true,
+    "contact": ["1140230671"],
+    "image": "../public/contact/telegrama.png",
+    "image2": "../public/contact/telegrama-white.png",
+    "url": "#"
+  },
+  {
+    "id": 5,
+    "socialNetwork": "X",
+    "userName": "@dleiteNatural",
+    "online": false,
+    "contact": ["Mensaje Directo"],
+    "image": "../public/contact/twitter.png",
+    "image2": "../public/contact/twitter-white.png",
+    "url": "#"
+  },
+  {
+    "id": 6,
+    "socialNetwork": "Email",
+    "userName": "ginociancia10@gmail.com",
+    "online": true,
+    "contact": ["ginociancia10@gmail.com"],
+    "image": "../public/contact/correo.png",
+    "image2": "../public/contact/correo-white.png",
+    "url": "#"
+  }
+]
