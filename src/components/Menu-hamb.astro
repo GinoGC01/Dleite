@@ -1,0 +1,60 @@
+---
+---
+<span class="menu-hamb"></span>
+
+<style>
+    .menu-hamb {
+        position: relative;
+        display: block;
+        width: .6em;
+        height: .6em;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+
+    .menu-hamb::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: .6em;
+        height: .4em;
+        background-color: rgb(255, 255, 255);
+        top: -8px;
+        border-radius: 50% 50% 0 0;
+        transition: height ease-in-out .1s, top ease-in-out .1s;
+    }
+
+    .menu-hamb::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: .6em;
+        height: .4em;
+        background-color: rgb(255, 255, 255);
+        top: 12px;
+        border-radius: 0% 0% 50% 50%;
+        transition: height ease-in-out .1s, top ease-in-out .1s;
+    }
+
+    .menu-hamb-on::after {
+        height: .8em;
+        border-radius: 5px;
+        top: -6px;
+    }
+
+    .menu-hamb-on::before{
+        top: 3px;
+        height: 1em;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+const menuhamb = document.querySelector(".menu-hamb")
+
+menuhamb.addEventListener('click', ()=>{
+    menuhamb.classList.toggle('menu-hamb-on');
+    
+})
+</script>

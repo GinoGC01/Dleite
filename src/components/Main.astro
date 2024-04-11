@@ -2,6 +2,7 @@
 import Header01 from "./Header-01.astro";
 import products from "../../sources/products.json"
 import {CardYogurtType} from "./CardYogurtType.jsx"
+import { prefetch } from "astro:prefetch";
 ---
 
 <main>
@@ -13,15 +14,25 @@ import {CardYogurtType} from "./CardYogurtType.jsx"
         <span class="logo">
             <img src="../../public/logo.jpg" alt="">
         </span>
-        <p>Descubre nuestro deliciosos mundo de Yogures naturales artesanales. Con variedades únicas, nuestro yogurt griego es nuestra especialidad. ¡Conócenos yy disfruta de una experiencia única en cada cucharada!</p>
+        <p>Descubre nuestro deliciosos mundo de Yogures naturales artesanales. Con variedades únicas, nuestro yogurt griego es nuestra especialidad. <strong>¡Conócenos y disfruta de una experiencia única en cada cucharada!</strong></p>
         <h3>Tipos de yogures</h3>
-        {
-            products?.map(product =>{
-                return(
-                    <CardYogurtType title={product.tipo} descripcion={product.descripcion}client:visible />
-                )
-            })
-        }
+        <ul>
+            {
+                products?.map(product =>{
+                    return(
+                        <CardYogurtType 
+                        stock={product.stock}
+                        flag={product.flag}
+                        title={product.tipo} 
+                        descripcion={product.descripcion}
+                        cantidad={product.cantidad}
+                        adicionales={product.adicionales}
+                        client:visible />
+                    )
+                })
+            }
+        </ul>
+        
     </section>
 </main>
 
@@ -48,6 +59,14 @@ import {CardYogurtType} from "./CardYogurtType.jsx"
         align-items: center;
     }
 
+    ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
     .presentation > h1 {
         font-weight: 200;
         color: white;
@@ -65,7 +84,7 @@ import {CardYogurtType} from "./CardYogurtType.jsx"
     .presentation > h3{
         margin-top: 10px;
         font-size: 1.5em;
-        font-weight: 300;
+        font-weight: 600;
         color: #022409
     }
 

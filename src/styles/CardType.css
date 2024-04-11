@@ -1,5 +1,6 @@
 
 .cardtype-container{
+    list-style: none;
     position: relative;
     width: 90%;
     display: flex;
@@ -14,7 +15,7 @@
 
 .title-card{
     font-size: 1.2em;
-    font-weight: 200;
+    font-weight: 500;
 }
 
 .icon-card{
@@ -30,27 +31,30 @@
 /* card on */
 
 .Card-description-container{
+    position: relative;
     display: flex;
     max-width: 20em;
-    height: 15em;
-    position: relative;
+    height: 18em;
     margin-top: 110px;
     background: linear-gradient(360deg, #084d17 0%, #0e8729 100%);
     border-radius: 20px 20px 20px 0;
 }
 
-.Card-description-container > h3{
-    position: absolute;
-    top: -90px;
-    left: 25px;
-    z-index: 1000;
-    color: white;
-    font-weight: 500;
-}
-
-.Card-description-container > img {
+.title{
     position: absolute;
     top: -100px;
+    left: 25px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    color: white;
+    font-weight: bold;
+}
+
+.Card-description-container > .yogurt-image {
+    position: absolute;
+    top: -110px;
     width: 93%;
     height: 13em;
     transform: translateX(3.5%);
@@ -60,6 +64,12 @@
 
 }
 
+.flag {
+    width: 25px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 .Card-text-button-container{
     height: 100%;
     position: relative;
@@ -67,7 +77,7 @@
     flex-direction: column;
     justify-content: end;
     padding: 10px;
-    gap: 1em;
+    gap: .2em;
     overflow: hidden;
 }
 
@@ -106,9 +116,71 @@
     text-wrap: pretty;
 }
 
-.Card-text-button-container > button{
+.Card-text-button-container > a{
+    text-decoration: none;
     background-color: transparent;
     border: none;
     text-align: right;
     color: white;
 }
+
+.details > ul{
+    display: flex;
+    align-items: center;
+    gap: .2em;
+}
+
+.details> ul > h3{
+    color: white;
+    font-size: 1em;
+    margin: 5px;
+}
+
+
+.details > ul > li, .details> ul > li{
+    background-color: #72e0826c;
+    padding: 2px;
+    border-radius: 5px;
+    color: white;
+    font-size: .5em;
+}
+
+
+.no-stock, .stock{
+    position: absolute;
+    top: 5.5em;
+    right: 1.5em;
+    font-weight: 500;
+    font-size: .8em;
+    padding: 4px 9px;
+    border-radius: 10px;
+}
+
+.stock{
+    color: #0da52ece;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.no-stock{
+    color: #7e7e7e;
+    background-color: rgb(255, 255, 255);
+}
+
+.stock::after, .no-stock::after{
+    content: "";
+    display: inline-block;
+    height: .6em;
+    width: .6em;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.stock::after{
+    background-color: #0da52ece;
+}
+
+.no-stock::after{
+    background-color: #7e7e7e;
+}
+

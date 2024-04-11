@@ -1,5 +1,181 @@
 ---
+import products from "../../sources/products.json"
+
+const productStock = products?.filter(product => product.stock == true)
 ---
 <section>
-    <h2>Products</h2>
+    <h2>Productos: </h2>
+    <ul class="cards-products-conteiner">
+        {productStock?.map(product => {
+            return(
+                <li class="card-container">
+                    <a href="#">
+                        <span class="material-symbols-outlined">add_shopping_cart</span>
+                    </a>
+                    {product.flag != "" && <img src={product.flag} alt={`Yogurt de tipo ${product.tipo}`}/>}
+                    <div class="left-card">
+                        <img src="../../../150goptimizated.png" alt=""/>
+                        <div>
+                            <h3>Tipo: {product.tipo}</h3>
+                            <p>Cantidades: </p>
+                            <ul class="cantidad">
+                                {product.cantidad.medida.map(medida => {
+                                    return(<li>{medida} {product.cantidad.unidad}</li>)
+                                })}
+                            </ul>
+                            <p>Adicionales: </p>
+                            <ul class="adicionales">
+                                {product.adicionales.length > 0 ? (
+                                    product.adicionales.map((adicional) => (
+                                        <li>{adicional}</li>
+                                ))
+                                ) : (
+                                    <li>Agregar a gusto</li>
+                                )} 
+                            </ul>
+                        </div>
+                    </div>
+
+                </li>
+            )
+        })}
+    </ul>
 </section>
+
+<style>
+    section{
+        padding: 10px;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    .cards-products-conteiner{
+        position: relative;
+        margin-top: 30px;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        overflow: hidden;
+    }
+
+    .card-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        background:linear-gradient(90deg,#012208 45%, #084d1741 100%);
+        padding: 10px;
+        border-radius: 30px 0px 30px 0;
+    }
+
+    .card-container > img{
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        border-radius: 30px 0px 30px 0;
+        z-index: -1;
+        top:0;
+        right: 0;
+        opacity: .5;
+    }
+
+    .card-container > ul {
+        font-size: .8em;
+        color: rgb(236, 236, 236);
+        font-weight: 600;
+    }
+
+    .card-container > a{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* bottom: 5px; */
+        top: 10px;
+        right: 3%;
+        height: 30px;
+        width: 30px;
+        background-color: #226d2dbe;
+        border-radius: 50%;
+        color: white;
+    }
+
+    .card-container > a > span{
+        font-size: 1.2em;
+    }
+
+    .left-card{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        min-width: 12em;
+        height: 10em;
+        border-radius: 20px 50% 20px 0;
+        color: white;
+    }
+
+    .left-card > div{
+        position: relative;
+        height: 10em;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: .25em;
+        padding: 5px 10px 10px 10px;
+        border-radius: 15px;
+        z-index: 1000;
+    }
+
+    .left-card > img {
+        position: absolute;
+        top: -4em;
+        width: 9em;
+        backdrop-filter: drop-shadow(0px 0px 10px #00000080);
+    }
+
+    .left-card > div > p{
+        font-size: .7em;
+        font-weight: bold;
+    }
+
+    .cantidad, .adicionales{
+        font-size: .7em;
+        display: flex;
+        gap: .5em;
+    }
+
+    .cantidad > li, .adicionales > li{
+        background-color: #72e0826c;
+        padding: 2px;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .left-card > h3 {
+        font-size: .5em;
+    }
+    
+    .card-container > ul{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 12em;
+        width: 100%;
+    }
+
+    .card-container > ul > strong{
+        position: relative;
+        left: -35px;
+        margin-bottom: 5px;
+        font-size: 2em;
+        color: #174e21;
+        color: rgb(236, 236, 236);
+    }
+
+
+</style>
