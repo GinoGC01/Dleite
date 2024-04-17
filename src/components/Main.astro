@@ -9,33 +9,36 @@ import contacts from "../../sources/contact.json";
 <main>
   <Header01 />
   <section class="presentation">
-    <!-- <img class="logo" src="../../public/logo.jpg" alt=""> -->
-    <img class="title-logo" src="../../../D’leite.png-white.png" alt="" />
-    <h1>Yogures naturales</h1>
-    <ul class="contact-socialmedia-container">
-      {
-        contacts.map(
-          (contact) =>
-            contact.online && (
-              <ContactLi
-                contact={contact}
-                width="1.5em"
-                height="1.5em"
-                color="none;"
-              />
+    <div>
+      <div class="principal">
+        <img class="title-logo" src="../../../D’leite.png-white.png" alt="" />
+        <h1>Yogures naturales</h1>
+        <ul class="contact-socialmedia-container">
+          {
+            contacts.map(
+              (contact) =>
+                contact.online && (
+                  <ContactLi
+                    contact={contact}
+                    width="1.5em"
+                    height="1.5em"
+                    color="none;"
+                  />
+                )
             )
-        )
-      }
-    </ul>
-    <span class="logo">
-      <img src="../../public/logo.jpg" alt="" />
-    </span>
-    <p>
-      Descubre nuestro deliciosos mundo de Yogures naturales artesanales. Con
-      variedades únicas, nuestro yogurt griego es nuestra especialidad. <strong
-        >¡Conócenos y disfruta de una experiencia única en cada cucharada!</strong
-      >
-    </p>
+          }
+        </ul>
+      </div>
+      <span class="logo">
+        <img src="../../public/logo.jpg" alt="" />
+      </span>
+      <p>
+        Descubre nuestro deliciosos mundo de Yogures naturales artesanales. Con
+        variedades únicas, nuestro yogurt griego es nuestra especialidad. <strong
+          >¡Conócenos y disfruta de una experiencia única en cada cucharada!</strong
+        >
+      </p>
+    </div>
     <h3>Tipos de yogures</h3>
     <ul class="types-yogures">
       {
@@ -48,6 +51,7 @@ import contacts from "../../sources/contact.json";
               descripcion={product.descripcion}
               cantidad={product.cantidad}
               adicionales={product.adicionales}
+              image={product.imagen}
               client:visible
             />
           );
@@ -76,13 +80,14 @@ import contacts from "../../sources/contact.json";
     border-radius: 0 0 35% 35%;
   }
 
-  .presentation {
+  .presentation, .presentation > div {
     position: relative;
     display: flex;
     gap: 0.6em;
     flex-direction: column;
     align-items: center;
   }
+
 
   .types-yogures {
     width: 100%;
@@ -92,12 +97,19 @@ import contacts from "../../sources/contact.json";
     gap: 1em;
   }
 
-  .presentation > h1 {
+  .principal{
+    display: flex;
+    flex-direction: column;
+    gap: .4em;
+    width: auto;
+  }
+
+  .principal h1 {
     font-weight: 200;
     color: white;
   }
 
-  .presentation > p {
+  .presentation > div > p {
     margin-top: 10px;
     text-align: center;
     color: #022409;
@@ -141,5 +153,61 @@ import contacts from "../../sources/contact.json";
   .logo > img {
     width: 52%;
     margin-left: 10px;
+  }
+
+  @media (width > 700px){
+    main::before{
+      border-radius: 0;
+      height: 650px;
+      /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 53.3%); */
+      background: linear-gradient(
+      180deg,
+      rgba(9, 95, 28, 1) 0%,
+      rgba(14, 156, 46, 0) 100%
+      );
+    }
+
+    .presentation > div{
+      flex-direction: row;
+      width: 70%;
+      margin: 5em;
+      justify-content: center;
+      gap: 7em;
+      /* background-color: #022409; */
+    }
+
+    .logo{
+      display: none;
+    }
+
+    .principal{
+      align-items: center;
+      border-radius: 40px;
+    }
+
+    .logo > img{
+      width: ;
+    }
+
+    .title-logo{
+      width: 25em;
+    }
+
+    .principal h1{
+      font-size: 1.9em;
+      font-weight: 400;
+    }
+
+    .contact-socialmedia-container{
+      gap: .7em;
+      padding: 2em
+    }
+
+    .presentation > div > p{
+      text-align: start;
+      color: rgb(4, 59, 16);
+      font-size: 1.5em;
+      width: 600px;
+    }
   }
 </style>

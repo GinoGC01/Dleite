@@ -15,7 +15,7 @@
       "Versatil en su consumo",
       "Sensación de saciedad"
     ],
-    "imagen": "url_imagen_griego.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
     "descripcion": "Es un producto lácteo espeso y cremoso, con un sabor suave y ligeramente ácido. Se caracteriza por ser alto en proteínas y bajo en grasas. Es una excelente fuente de calcio y contiene probióticos que benefician la salud intestinal."
   },
   {
@@ -33,7 +33,7 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_bulgaro.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
     "descripcion": "Es un tipo de yogur espeso y cremoso, con un sabor característico debido a la cultura de fermentación utilizada. Es rico en proteínas y bajo en grasas, y contiene probióticos beneficiosos para la salud digestiva."
   },
   {
@@ -51,7 +51,8 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_islandes.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
+
     "descripcion": "También conocido como skyr, es un yogur espeso y cremoso originario de Islandia. Se hace colando el yogur para eliminar el suero, lo que le da una textura densa. Es rico en proteínas y bajo en grasas, y suele consumirse con miel o frutas."
   },
   {
@@ -69,7 +70,8 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_turco.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
+
     "descripcion": "El yogur turco es un tipo de yogur espeso y cremoso muy popular en Turquía. Se consume tanto en versiones dulces como saladas. Es rico en proteínas y calcio, y contiene probióticos que benefician la salud intestinal."
   },
   {
@@ -87,7 +89,8 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_indio.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
+
     "descripcion": "El yogur indio, también conocido como dahi, se hace fermentando la leche con una bacteria específica. Es un alimento versátil que se consume en la India como acompañamiento de platos salados, preparación de salsas y postres."
   },
   {
@@ -105,7 +108,8 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_frances.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
+
     "descripcion": "El yogur francés, es un yogur tradicional de Francia que puede variar en textura y sabor dependiendo de la región. Es rico en proteínas y calcio, y suele consumirse con mermelada o canela."
   },
   {
@@ -123,7 +127,8 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_australiano.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
+
     "descripcion": "El yogur australiano es similar al yogur griego pero con una textura más suave y cremosa. Es rico en proteínas y calcio, y suele consumirse con miel o frutas para mejorar su sabor."
   },
   {
@@ -140,7 +145,8 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_hungaro.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
+
     "descripcion": "El yogur húngaro es un tipo de yogur espeso y cremoso que se caracteriza por tener una capa de chocolate en su interior. Es rico en proteínas y calcio, y suele consumirse como postre o merienda."
   },
   {
@@ -158,7 +164,8 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_mexicano.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
+
     "descripcion": "El yogur mexicano es una variedad de yogur muy popular en México, que puede tener diferentes sabores y consistencias. Se consume solo o como ingrediente en una variedad de platos y postres mexicanos."
   },
   {
@@ -176,7 +183,8 @@
       "Contiene probióticos",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_suizo.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
+
     "descripcion": "El yogur suizo es un tipo de yogur muy cremoso y suave, que se diferencia por su proceso de fabricación que incluye el uso de leche fresca y nata. Es rico en proteínas y calcio, y suele consumirse con miel o frutas para darle sabor."
   },
   {
@@ -194,7 +202,7 @@
       "Bajo en grasas",
       "Mejora la digestión"
     ],
-    "imagen": "url_imagen_natural.jpg",
+    "imagen": ["../../yogurt-griego-200.jpeg", "../../yogurt-griego-500.webp","../../yogurt-griego-1000.webp"],
     "descripcion": "El yogur natural es un producto lácteo sin aditivos ni sabores añadidos. Es una excelente fuente de calcio y contiene probióticos que benefician la salud intestinal. Puede consumirse solo o como base para salsas y aderezos."
   }
 ]

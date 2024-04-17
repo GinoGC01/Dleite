@@ -1,12 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/MenuHamb.css";
 import "animate.css";
 
 export function MenuHamb() {
   const [active, setActive] = useState(false);
+  const [windw, setWindw] = useState(false);
+
   const handleActive = () => {
     setActive(!active);
   };
+
+  const handleResponsive = () => {
+    if (window.innerWidth > 700) {
+      setWindw(true);
+    }
+  };
+
+  useEffect(() => {
+    handleResponsive();
+  }, [windw]);
 
   return (
     <>
@@ -17,22 +29,32 @@ export function MenuHamb() {
       <nav
         className={
           !active
-            ? "nav-mobile animate__animated animate__fadeOut aniomate__faster nav-mobile-off"
+            ? `nav-mobile ${
+                windw ? "" : "animate__animated"
+              } animate__fadeOut aniomate__faster nav-mobile-off`
             : "nav-mobile animate__animated animate__fadeIn aniomate__faster"
         }
       >
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="/" title="home">
+              Home
+            </a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="#" title="políticas y términos" target="_blank">
+              Políticas y términos
+            </a>
           </li>
           <li>
-            <a href="#">Políticas y términos</a>
+            <a href="#" title="Testimonios" target="_blank">
+              Testimonios
+            </a>
           </li>
           <li>
-            <a href="#">Testimonios</a>
+            <a href="#" title="Blog" target="_blank">
+              Blog
+            </a>
           </li>
         </ul>
       </nav>

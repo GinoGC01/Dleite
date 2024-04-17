@@ -69,7 +69,7 @@
   font-weight: bold;
 }
 
-.Card-description-container > .yogurt-image {
+.yogurt-image {
   position: absolute;
   top: -110px;
   width: 93%;
@@ -77,7 +77,20 @@
   transform: translateX(3.5%);
   object-fit: cover;
   border-radius: 20px 20px 0 80px;
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.img-container::before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: -110px;
+  left: 10px;
+  border-radius: 20px 20px 0 80px;
+  width: 93%;
+  height: 13em;
+  background:linear-gradient(180deg, #242424bb 0%, #ffffff00 45%,  #ffffff00 100%);
+  box-shadow: 0 0 20px #242424bb inset;
+  z-index: 100;
 }
 
 .flag {
@@ -131,12 +144,16 @@
   text-wrap: pretty;
 }
 
-.Card-text-button-container > a {
+.lo-quiero-a {
   text-decoration: none;
   background-color: transparent;
   border: none;
   text-align: right;
   color: white;
+}
+
+.disabled{
+  display: none;
 }
 
 .details > ul {
@@ -151,13 +168,25 @@
   margin: 5px;
 }
 
-.details > ul > li,
-.details > ul > li {
+.medida,
+.aditionals {
   background-color: #72e0826c;
   padding: 2px;
   border-radius: 5px;
   color: white;
-  font-size: 0.5em;
+}
+
+.medida{
+  font-size: 0.7em;
+}
+
+.selected{
+  font-size: 0.8em;
+  opacity: .5;
+}
+
+.aditionals{
+  font-size: .5em;
 }
 
 .no-stock,
@@ -169,11 +198,13 @@
   font-size: 0.8em;
   padding: 4px 9px;
   border-radius: 10px;
+  z-index: 1000;
 }
 
 .stock {
   color: #0da52ece;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px #0000005b;
 }
 
 .no-stock {
