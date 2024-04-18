@@ -1,9 +1,9 @@
 ---
 import Header01 from "./Header-01.astro";
-import products from "../../sources/products.json";
-import { CardYogurtType } from "./CardYogurtType.jsx";
 import ContactLi from "./ContactLi.astro";
 import contacts from "../../sources/contact.json";
+import {ListYogurt} from './ListYogurt.jsx'
+import {Yogurt} from '../icons/Yogurt.jsx'
 ---
 
 <main>
@@ -12,7 +12,7 @@ import contacts from "../../sources/contact.json";
     <div>
       <div class="principal">
         <img class="title-logo" src="../../../D’leite.png-white.png" alt="" />
-        <h1>Yogures naturales</h1>
+        <h1>Yogures naturales </h1>
         <ul class="contact-socialmedia-container">
           {
             contacts.map(
@@ -39,25 +39,9 @@ import contacts from "../../sources/contact.json";
         >
       </p>
     </div>
-    <h3>Tipos de yogures</h3>
-    <ul class="types-yogures">
-      {
-        products?.map((product) => {
-          return (
-            <CardYogurtType
-              stock={product.stock}
-              flag={product.flag}
-              title={product.tipo}
-              descripcion={product.descripcion}
-              cantidad={product.cantidad}
-              adicionales={product.adicionales}
-              image={product.imagen}
-              client:visible
-            />
-          );
-        })
-      }
-    </ul>
+    <h3>Tipos de yogures <Yogurt/></h3>
+    <p class="flag1">Puedes seleccionar la cantidad!</p>
+    <ListYogurt client:visible/>
   </section>
 </main>
 
@@ -88,15 +72,6 @@ import contacts from "../../sources/contact.json";
     align-items: center;
   }
 
-
-  .types-yogures {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-
   .principal{
     display: flex;
     flex-direction: column;
@@ -117,10 +92,18 @@ import contacts from "../../sources/contact.json";
   }
 
   .presentation > h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
+    margin-top: 50px;
+    font-size: 1.8em;
     font-weight: 600;
     color: #022409;
+    display: flex;
+    align-items: center;
+    gap: .2em
+  }
+
+  .flag1{
+    color: #02240979;
+    padding-bottom: 1em;
   }
 
   .contact-socialmedia-container {
@@ -209,5 +192,13 @@ import contacts from "../../sources/contact.json";
       font-size: 1.5em;
       width: 600px;
     }
+    .presentation > h3 {
+    margin-top: 10px;
+    font-size: 2.6em;
+    font-weight: bold;
+    color: #022409;
+  }
+
+
   }
 </style>

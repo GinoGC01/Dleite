@@ -10,7 +10,9 @@
   background: linear-gradient(90deg, #084d17 0%, #0e8729 100%);
   color: white;
   transition: all ease-in-out 0.2s;
+  cursor: pointer;
 }
+
 
 .stock-bullet-on,
 .stock-bullet-off {
@@ -145,12 +147,18 @@
 }
 
 .lo-quiero-a {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap:.3em ;
+  width: 100%;
   text-decoration: none;
   background-color: transparent;
   border: none;
-  text-align: right;
   color: white;
 }
+
+
 
 .disabled{
   display: none;
@@ -178,6 +186,7 @@
 
 .medida{
   font-size: 0.7em;
+  cursor: pointer;
 }
 
 .selected{
@@ -228,4 +237,115 @@
 
 .no-stock::after {
   background-color: #7e7e7e;
+}
+
+.container-open{
+  background: linear-gradient(90deg, #084d17 0%, #084d17 100%);
+  transform: scale(1.03);
+
+}
+
+
+@media (width > 700px){
+
+  .icon-card{
+    display: none;
+  }
+
+  .cardtype-container {
+    list-style: none;
+    position: relative;
+    width: 45%;
+  }
+  
+  .title {
+    top: -95px;
+    left: 40px;
+    font-size: 1.2em;
+  }
+
+  .Card-description-container {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 14em);
+    max-width: 35em;
+    height: 34em;
+    margin-top: 0px;
+  }
+
+  .yogurt-image {
+    position: absolute;
+    top: -110px;
+    width: 93%;
+    height: 25em;
+    transform: translateX(3.5%);
+    object-fit: cover;
+    border-radius: 20px 20px 0 80px;
+  }
+  
+  .img-container::before{
+    position: absolute;
+    top: -110px;
+    left: 0;
+    transform: translateX(3.5%);
+    width: 93%;
+    height: 25em;
+  }
+
+  .no-stock,
+  .stock {
+    top: 51%;
+    right: 1.3em;
+    transform: scale(1.15);
+  }
+
+  .Card-text-button-container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px;
+    gap: 1em;
+    overflow: hidden;
+  }
+
+  .Card-text-button-container > p {
+    font-size: 1em;
+    padding: 0 7px;
+  }
+
+
+  .Card-text-button-container::before {
+    width: 25em;
+    height: 25em;
+  }
+  
+  .Card-text-button-container::after {
+    width: 32em;
+    height: 32em;
+  }
+
+  .medida,
+  .aditionals {
+    padding: 2px 10px;
+    font-size: 1em;
+
+  }
+  .medida{
+    font-size: 1em;
+    margin-bottom: .8em;
+  }
+
+
+  .lo-quiero-a {
+    font-size: 1.3em;
+    transition: transform ease-in .1s;
+  }
+
+  .lo-quiero-a:hover{
+    transform: translateX(5px);
+    color: rgba(255, 255, 255, 0.555);
+  }
+  
 }

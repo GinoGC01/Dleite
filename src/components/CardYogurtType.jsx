@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "animate.css";
 import "../styles/CardType.css";
+import { DobleArrow } from "../icons/DobleArrow";
 
 export function CardYogurtType({
   flag,
@@ -10,8 +11,9 @@ export function CardYogurtType({
   adicionales,
   stock,
   image,
+  isOpen,
+  handCard,
 }) {
-  const [open, setOpen] = useState(false);
   const [medida, setMedida] = useState(0);
   const [selected, setSelected] = useState(false);
   const [peso, setPeso] = useState(200);
@@ -34,13 +36,18 @@ export function CardYogurtType({
   };
 
   const handleOpenCard = () => {
-    setOpen(!open);
+    handCard();
     setTipo(title);
   };
 
   return (
     <>
-      <li className="cardtype-container" onClick={handleOpenCard}>
+      <li
+        className={
+          !isOpen ? "cardtype-container" : "cardtype-container container-open"
+        }
+        onClick={handleOpenCard}
+      >
         <span
           className={
             stock
@@ -51,7 +58,7 @@ export function CardYogurtType({
         <strong className="title-card">{title}</strong>
         <span
           className={
-            !open
+            !isOpen
               ? "material-symbols-outlined icon-card"
               : "material-symbols-outlined icon-card open"
           }
@@ -60,7 +67,7 @@ export function CardYogurtType({
         </span>
       </li>
 
-      {open && (
+      {isOpen && (
         <li className="animate__animated animate__bounceIn Card-description-container">
           <div className="title">
             <h3>Yogurt {title}</h3>
@@ -115,8 +122,10 @@ export function CardYogurtType({
             <a
               className={stock ? "lo-quiero-a" : "disabled"}
               href={`https://api.whatsapp.com/send?phone=541140230671&text=Hola!%20deseo%20información%20acerca%20del%20yogurt%20${tipo}%20de%20${peso}%20gr.`}
+              title={`Comprar yogurt tipo ${tipo} de ${peso} gr.`}
             >
               Lo quiero!
+              <DobleArrow />
             </a>
           </div>
         </li>
