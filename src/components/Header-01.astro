@@ -1,33 +1,36 @@
 ---
-import {MenuHamb} from "./MenuHamb.jsx"
+import { MenuHamb } from "./MenuHamb.jsx";
 ---
+
 <header>
-    <img src="../../../D’leite.png white-MSI.png" alt="logo d'leite compuesto fondo blanco">
-    <MenuHamb client:visible/>
+  <img
+    src="../../../D’leite.png white-MSI.png"
+    alt="logo D'leite compuesto fondo blanco"
+  />
+  <MenuHamb client:visible />
 </header>
 
-
 <style>
-    header{
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 25px;
+  header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+  }
+
+  img {
+    width: 3em;
+  }
+
+  @media (width > 700px) {
+    header {
+      padding: 1.5em 15em;
     }
 
-    img{
-        width: 3em;
+    img {
+      width: 5em;
     }
-
-    @media (width > 700px){
-        header{
-            padding: 1.5em 15em;
-        }
-
-        img{
-            width: 5em;
-        }
-    }
+  }
 </style>

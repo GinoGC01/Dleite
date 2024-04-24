@@ -52,7 +52,7 @@ export function MenuHamb() {
             </a>
           </li>
           <li>
-            <a href="#" title="Blog" target="_blank">
+            <a href="/BlogTemp" title="Blog" target="_blank">
               Blog
             </a>
           </li>

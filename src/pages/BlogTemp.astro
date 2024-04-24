@@ -1,0 +1,213 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Aviso Blog">
+  <section>
+    <span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"
+        ></path>
+      </svg>
+    </span>
+    <h1>¡Página en desarrollo!</h1>
+    <p>El apartado del <strong>blog</strong> tiene como objetivo:</p>
+    <ul>
+      <li>
+        <h3>Compartir Recetas Creativas 😋</h3>
+        <p>
+          Subir regularmente recetas que incorporen yogures naturales como
+          ingrediente principal o complementario. Esto puede incluir recetas de
+          batidos, postres, aderezos para ensaladas, salsas y mucho más.
+        </p>
+      </li>
+      <li>
+        <h3>Promover un Estilo de Vida Saludable 💪</h3>
+        <p>
+          Será un recurso para aquellos que desean adoptar un estilo de vida
+          saludable. Aquí se proporcionará información sobre los beneficios para
+          la salud que brindan los yogures naturales, y cómo pueden integrarse
+          en una dieta equilibrada.
+        </p>
+      </li>
+      <li>
+        <h3>Educar sobre Probióticos y Nutrición 🍏</h3>
+        <p>
+          Habrá algunas publicaciones para explicar los beneficios de los
+          probióticos que se encuentran en los yogures naturales y cómo afectan
+          a la salud digestiva y general. También se proporcionará información
+          nutricional sobre los diferentes tipos de yogures y cómo elegir los
+          más saludables.
+        </p>
+      </li>
+      <li>
+        <h3>Reseñas de Productos 📒</h3>
+        <p>
+          Se harán reseñas de diferentes tipos de yogures naturales disponibles
+          en la tienda. Compararemos sus ingredientes, sabor, textura y calidad
+          nutricional para ayudar a tus lectores a tomar decisiones informadas
+          al comprar.
+        </p>
+      </li>
+    </ul>
+    <a href="/" title="Volver al home">
+      <svg
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"></path>
+      </svg>
+    </a>
+  </section>
+</Layout>
+
+<style>
+  section {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      rgba(9, 95, 28, 1) 0%,
+      rgba(165, 165, 165, 0.329) 100%
+    );
+    padding: 1.5em;
+  }
+
+  section > p {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.3em;
+  }
+
+  h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+    color: white;
+    font-size: 2.5em;
+  }
+
+  span {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background-color: rgb(7, 80, 24);
+  }
+
+  span svg {
+    display: block;
+    height: 2.5em;
+    width: 2.5em;
+    margin: auto;
+    color: white;
+  }
+
+  ul {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    color: rgb(2, 46, 12);
+  }
+
+  li {
+    padding: 20px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  li h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: rgb(224, 224, 224);
+  }
+
+  li p {
+    font-size: 1.05em;
+    text-wrap: pretty;
+  }
+
+  a {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.459);
+    border: none;
+  }
+
+  a svg {
+    width: 50%;
+    color: white;
+  }
+
+  @media (width < 700px) {
+    section {
+      width: auto;
+      height: auto;
+      background: linear-gradient(
+        180deg,
+        rgba(9, 133, 38, 0.8) 0%,
+        rgba(9, 95, 28, 0.5) 100%
+      );
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    ul {
+      width: 90%;
+    }
+
+    li h3 {
+      font-size: 1.1em;
+    }
+
+    li p {
+      font-size: 0.9em;
+    }
+
+    li {
+      padding: 20px;
+    }
+
+    a {
+      width: 2em;
+      height: 2em;
+      border: 1px solid white;
+    }
+  }
+</style>

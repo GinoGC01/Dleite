@@ -2,8 +2,8 @@
 import Header01 from "./Header-01.astro";
 import ContactLi from "./ContactLi.astro";
 import contacts from "../../sources/contact.json";
-import {ListYogurt} from './ListYogurt.jsx'
-import {Yogurt} from '../icons/Yogurt.jsx'
+import { ListYogurt } from "./ListYogurt.jsx";
+import { Yogurt } from "../icons/Yogurt.jsx";
 ---
 
 <main>
@@ -12,7 +12,7 @@ import {Yogurt} from '../icons/Yogurt.jsx'
     <div>
       <div class="principal">
         <img class="title-logo" src="../../../D’leite.png-white.png" alt="" />
-        <h1>Yogures naturales </h1>
+        <h1>Yogures naturales</h1>
         <ul class="contact-socialmedia-container">
           {
             contacts.map(
@@ -39,9 +39,9 @@ import {Yogurt} from '../icons/Yogurt.jsx'
         >
       </p>
     </div>
-    <h3>Tipos de yogures <Yogurt/></h3>
+    <h3>Tipos de yogures <Yogurt /></h3>
     <p class="flag1">Puedes seleccionar la cantidad!</p>
-    <ListYogurt client:visible/>
+    <ListYogurt client:visible />
   </section>
 </main>
 
@@ -64,7 +64,8 @@ import {Yogurt} from '../icons/Yogurt.jsx'
     border-radius: 0 0 35% 35%;
   }
 
-  .presentation, .presentation > div {
+  .presentation,
+  .presentation > div {
     position: relative;
     display: flex;
     gap: 0.6em;
@@ -72,10 +73,10 @@ import {Yogurt} from '../icons/Yogurt.jsx'
     align-items: center;
   }
 
-  .principal{
+  .principal {
     display: flex;
     flex-direction: column;
-    gap: .4em;
+    gap: 0.4em;
     width: auto;
   }
 
@@ -98,10 +99,10 @@ import {Yogurt} from '../icons/Yogurt.jsx'
     color: #022409;
     display: flex;
     align-items: center;
-    gap: .2em
+    gap: 0.2em;
   }
 
-  .flag1{
+  .flag1 {
     color: #02240979;
     padding-bottom: 1em;
   }
@@ -138,19 +139,19 @@ import {Yogurt} from '../icons/Yogurt.jsx'
     margin-left: 10px;
   }
 
-  @media (width > 700px){
-    main::before{
+  @media (width > 700px) {
+    main::before {
       border-radius: 0;
       height: 650px;
       /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 53.3%); */
       background: linear-gradient(
-      180deg,
-      rgba(9, 95, 28, 1) 0%,
-      rgba(14, 156, 46, 0) 100%
+        180deg,
+        rgba(9, 95, 28, 1) 0%,
+        rgba(14, 156, 46, 0) 100%
       );
     }
 
-    .presentation > div{
+    .presentation > div {
       flex-direction: row;
       width: 70%;
       margin: 5em;
@@ -159,47 +160,45 @@ import {Yogurt} from '../icons/Yogurt.jsx'
       /* background-color: #022409; */
     }
 
-    .logo{
+    .logo {
       display: none;
     }
 
-    .principal{
+    .principal {
       align-items: center;
       border-radius: 40px;
     }
 
-    .logo > img{
-      width: ;
+    .logo > img {
+      width:;
     }
 
-    .title-logo{
+    .title-logo {
       width: 25em;
     }
 
-    .principal h1{
+    .principal h1 {
       font-size: 1.9em;
       font-weight: 400;
     }
 
-    .contact-socialmedia-container{
-      gap: .4em;
+    .contact-socialmedia-container {
+      gap: 0.4em;
       padding: 2em;
       transform: scale(1.5);
     }
 
-    .presentation > div > p{
+    .presentation > div > p {
       text-align: start;
       color: rgb(4, 59, 16);
       font-size: 1.5em;
       width: 600px;
     }
     .presentation > h3 {
-    margin-top: 10px;
-    font-size: 2.6em;
-    font-weight: bold;
-    color: #022409;
-  }
-
-
+      margin-top: 10px;
+      font-size: 2.6em;
+      font-weight: bold;
+      color: #022409;
+    }
   }
 </style>
