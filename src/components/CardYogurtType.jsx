@@ -2,6 +2,7 @@ import { useState } from "react";
 import "animate.css";
 import "../styles/CardType.css";
 import { DobleArrow } from "../icons/DobleArrow";
+import { TEXT, PHONE } from "../../constants/whatsappMessages";
 
 export function CardYogurtType({
   flag,
@@ -44,7 +45,9 @@ export function CardYogurtType({
     <>
       <li
         className={
-          !isOpen ? "cardtype-container" : "cardtype-container container-open"
+          !isOpen
+            ? "cardtype-container"
+            : "cardtype-container cardtype-container-open"
         }
         onClick={handleOpenCard}
       >
@@ -55,6 +58,8 @@ export function CardYogurtType({
               : "stock-bullet-off stock-bullet"
           }
         ></span>
+
+        {stock == false && <span className="proximamente">proximamente</span>}
         <strong className="title-card">{title}</strong>
         <span
           className={
@@ -85,43 +90,57 @@ export function CardYogurtType({
             />
           </div>
           <span className={stock ? "stock" : "no-stock"}>
-            {stock ? "Disponible" : "No disponible"}
+            {stock ? "Disponible" : "Proximamente"}
           </span>
           <div className="Card-text-button-container">
             <p>{descripcion}</p>
             <div className="details">
-              <ul>
+              <div className="cantidades-container">
                 <h3>Cantidades:</h3>
-                {cantidad.medida.map((medida, index) => {
-                  return (
-                    <li
-                      key={index}
-                      onClick={() => {
-                        handleMedida(index);
-                      }}
-                      className={
-                        index === selected ? "medida selected" : "medida"
-                      }
-                    >
-                      {medida} {cantidad.unidad}
-                    </li>
-                  );
-                })}
-              </ul>
-              <ul>
+                <ul>
+                  {cantidad.medida.map((medida, index) => {
+                    return (
+                      <li
+                        key={index}
+                        onClick={() => {
+                          handleMedida(index);
+                        }}
+                        className={
+                          index === selected ? "medida selected" : "medida"
+                        }
+                      >
+                        {medida === 1000 ? 1 : medida}{" "}
+                        {medida === 1000 ? "kilo" : "grs"}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <div className="adicionales-container">
                 <h3>Adicionales:</h3>
-                {adicionales.map((adicional, index) => {
-                  return (
-                    <li key={index} className="aditionals">
-                      {adicional}
+                <ul>
+                  {adicionales.length != 0 ? (
+                    adicionales.map((adicional, index) => {
+                      return (
+                        <li key={index} className="aditionals">
+                          {adicional}
+                        </li>
+                      );
+                    })
+                  ) : (
+                    <li key="Preparar-a-gusto" className="aditionals">
+                      Preparar a gusto!
                     </li>
-                  );
-                })}
-              </ul>
+                  )}
+                </ul>
+              </div>
             </div>
             <a
               className={stock ? "lo-quiero-a" : "disabled"}
-              href={`https://api.whatsapp.com/send?phone=541140230671&text=Hola!%20deseo%20información%20acerca%20del%20yogurt%20${tipo}%20de%20${peso}%20gr.`}
+              href={`https://api.whatsapp.com/send?phone=${PHONE}&text=${TEXT(
+                tipo,
+                peso
+              )}`}
               title={`Comprar yogurt tipo ${tipo} de ${peso} gr.`}
             >
               Lo quiero!

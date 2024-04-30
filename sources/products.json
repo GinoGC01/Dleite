@@ -57,7 +57,7 @@
   },
   {
     "id": 4,
-    "stock":true,
+    "stock":false,
     "tipo": "Turco",
     "flag": "https://logos-download.com/wp-content/uploads/2021/07/Flag_of_Turkey-2048x1365.png",
     "cantidad": {"medida": [200, 500, 1000],
@@ -95,7 +95,7 @@
   },
   {
     "id": 6,
-    "stock":true,
+    "stock":false,
     "tipo": "Francés",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/6/62/Flag_of_France.png",
     "cantidad": {"medida": [200, 500, 1000],
@@ -170,7 +170,7 @@
   },
   {
     "id": 10,
-    "stock":true,
+    "stock":false,
     "tipo": "Suizo",
     "flag": "https://cdn.pixabay.com/photo/2020/06/03/04/10/switzerland-5253378_1280.png",
     "cantidad": {"medida": [200, 500, 1000],
@@ -189,7 +189,7 @@
   },
   {
     "id": 11,
-    "stock":false,
+    "stock":true,
     "tipo": "Natural",
     "flag": "",
     "cantidad": {"medida": [200, 500, 1000],

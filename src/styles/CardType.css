@@ -11,7 +11,9 @@
   color: white;
   transition: all ease-in-out 0.2s;
   cursor: pointer;
+  transform: scale(1);
 }
+
 
 
 .stock-bullet-on,
@@ -158,23 +160,44 @@
   color: white;
 }
 
-
-
 .disabled{
   display: none;
 }
 
-.details > ul {
+.cantidades-container  ul, .adicionales-container ul {
   display: flex;
   align-items: center;
-  gap: 0.2em;
+  gap: .5em;
 }
 
-.details > ul > h3 {
+.adicionales-container ul{
+  gap: .3em;
+  flex-wrap: wrap;
+}
+
+.cantidades-container  ul > li:hover{
+  transform: scale(1.1);
+  transition: transform ease-in .1s;
+}
+
+.details  h3 {
   color: white;
   font-size: 1em;
   margin: 5px;
 }
+
+
+.cantidades-container, .adicionales-container{
+  display: flex;
+  gap: 1em;
+}
+
+.adicionales-container{
+
+  margin-top: 5px;
+}
+
+
 
 .medida,
 .aditionals {
@@ -182,6 +205,10 @@
   padding: 2px;
   border-radius: 5px;
   color: white;
+}
+
+.aditionals{
+  padding: 2px 5px;
 }
 
 .medida{
@@ -192,6 +219,8 @@
 .selected{
   font-size: 0.8em;
   opacity: .5;
+  transform: scale(1.1);
+
 }
 
 .aditionals{
@@ -239,11 +268,7 @@
   background-color: #7e7e7e;
 }
 
-.container-open{
-  background: linear-gradient(90deg, #084d17 0%, #084d17 100%);
-  transform: scale(1.03);
 
-}
 
 
 @media (width > 700px){
