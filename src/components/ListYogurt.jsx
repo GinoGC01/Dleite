@@ -40,6 +40,7 @@ export function ListYogurt() {
             image={product.imagen}
             isOpen={product.tipo === selectedCard}
             handCard={() => handleCardClick(product.tipo)}
+            precioPorUnidad={product.precioUnidad}
             key={product.id}
           />
         );

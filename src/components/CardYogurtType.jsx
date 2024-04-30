@@ -14,25 +14,30 @@ export function CardYogurtType({
   image,
   isOpen,
   handCard,
+  precioPorUnidad,
 }) {
   const [medida, setMedida] = useState(0);
   const [selected, setSelected] = useState(false);
   const [peso, setPeso] = useState(200);
   const [tipo, setTipo] = useState(null);
+  const [precioUnidad, setPrecioUnidad] = useState(1500);
 
   const handleMedida = (index) => {
     if (index == 0) {
       setMedida(0);
       setSelected(index);
       setPeso(200);
+      setPrecioUnidad(precioPorUnidad[index]);
     } else if (index == 1) {
       setMedida(1);
       setSelected(index);
       setPeso(500);
+      setPrecioUnidad(precioPorUnidad[index]);
     } else {
       setMedida(2);
       setSelected(index);
       setPeso(1000);
+      setPrecioUnidad(precioPorUnidad[index]);
     }
   };
 
@@ -78,6 +83,7 @@ export function CardYogurtType({
             <h3>Yogurt {title}</h3>
             {flag != "" && <img src={flag} alt={title} className="flag" />}
           </div>
+          <div className="price">{`$${precioUnidad},00`}</div>
           <div className="img-container">
             <img
               src={
@@ -102,9 +108,12 @@ export function CardYogurtType({
                     return (
                       <li
                         key={index}
-                        onClick={() => {
-                          handleMedida(index);
-                        }}
+                        onClick={
+                          stock &&
+                          (() => {
+                            handleMedida(index);
+                          })
+                        }
                         className={
                           index === selected ? "medida selected" : "medida"
                         }
