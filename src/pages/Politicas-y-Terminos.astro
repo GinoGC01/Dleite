@@ -1,0 +1,242 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header01 from "../components/Header-01.astro"
+import Footer from "../components/Footer.astro"
+
+const today = new Date()
+const dd = String(today.getDate()).padStart(2, '0'); // Día
+const mm = String(today.getMonth() + 1).padStart(2, '0'); // Mes (enero es 0)
+const yyyy = today.getFullYear(); // Año
+const fechaFormateada = `${dd}/${mm}/${yyyy}`;
+---
+<Layout title="Políticas y Términos">
+<section>
+    <Header01/>
+    <main>
+        <figure>
+            <img src="../../public/D’leite.png-white.png" alt="Logo d'leite natural">
+        </figure>
+        <h1>Políticas y Términos</h1>
+        <p><b>¡Bienvenido a D'leite Yogures!</b><br/>
+             Agradecemos tu interés en nuestros productos naturales y frescos. Antes de realizar cualquier compra, te recomendamos que leas detenidamente nuestras políticas y términos de uso para asegurarte de comprender completamente nuestras prácticas comerciales.</p>
+        <ol>
+            <li>
+                <h3>
+                    Calidad y Frescura de los Productos:
+                </h3>
+                <ul>
+                    <li>
+                        Todos nuestros yogures son productos naturales y frescos, sin conservantes ni aditivos. Se producen en lotes pequeños para garantizar la máxima calidad.
+                    </li>
+                    <li>
+                        Recomendamos consumir nuestros yogures dentro de los 10 días posteriores a su producción para disfrutar de su sabor y frescura óptimos. Aunque pueden durar hasta 15 días, no se recomienda su consumo más allá de este período.
+                    </li>
+                    <li>
+                        Nos comprometemos a ofrecer productos frescos y de producción reciente. Todos los yogures disponibles en nuestra página web tienen una fecha de producción de no más de tres días.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>
+                    Proceso de Compra:
+                </h3>
+                <ul>
+                    <li>
+                        Al realizar una compra en nuestra página web, aceptas que los productos frescos pueden tener una vida útil limitada y que es responsabilidad del cliente consumirlos dentro del tiempo recomendado.
+                    </li>
+                    <li>
+                        Te recomendamos revisar cuidadosamente la fecha de producción indicada en cada producto antes de realizar tu compra para asegurarte de recibir productos frescos.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>
+                    Envíos y Entregas:
+                </h3>
+                <ul>
+                    <li>
+                        Nos esforzamos por garantizar la entrega rápida y segura de nuestros productos frescos. Todos los pedidos se procesan y envían dentro de un plazo máximo de 3 (tres) días.
+                    </li>
+                    <li>
+                        Utilizamos métodos de envío refrigerados para preservar la frescura de nuestros yogures durante el transporte. Sin embargo, ten en cuenta que el tiempo de tránsito puede afectar la vida útil restante de los productos.
+                    </li>
+                    <li>
+                        Te recomendamos refrigerar los productos de inmediato después de recibirlos para mantener su frescura.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>
+                    Política de Devoluciones:
+                </h3>
+                <ul>
+                    <li>
+                        Debido a la naturaleza perecedera de nuestros productos, no aceptamos devoluciones de yogures una vez entregados, a menos que el producto llegue dañado o en mal estado.
+                    </li>
+                    <li>
+                        Si recibes un producto dañado o en mal estado, contáctanos dentro de las 24 horas posteriores a la entrega para que podamos resolver el problema de manera adecuada.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>
+                    Responsabilidad del Consumidor:
+                </h3>
+                <ul>
+                    <li>
+                        Al realizar una compra en nuestra página web, aceptas la responsabilidad de consumir los productos dentro del tiempo recomendado y almacenarlos adecuadamente para preservar su frescura.
+                    </li>
+                    <li>
+                        No nos hacemos responsables de los productos que no se consuman dentro del período recomendado o que no se almacenen adecuadamente.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>
+                    Contacto:
+                </h3>
+                <ul>
+                    <li>
+                        Si tienes alguna pregunta, inquietud o comentario sobre nuestras políticas y términos de uso, no dudes en ponerte en contacto con nuestro equipo de atención al cliente. Estamos aquí para ayudarte.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </main>
+   
+    <p>
+        Al realizar una compra de uno o varios productos D'leite, aceptas automáticamente nuestras políticas y términos de uso. Nos comprometemos a proporcionarte productos frescos y de la más alta calidad en cada pedido. <br/><b>¡Gracias por elegirnos!</b>
+    </p>
+    <strong>
+        Fecha de última actualización: {fechaFormateada}
+    </strong>
+</section>
+<Footer/>
+</Layout>
+
+<style>
+
+    section{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:#011806;
+    }
+
+    section::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 25em;
+        background: linear-gradient(180deg,
+        rgba(9, 95, 28, 1) 0%,
+        rgba(9, 95, 28, 0) 100%
+        );
+        z-index: -1;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 25px ;
+    }
+
+    main > p{
+        text-align: center;
+    }
+
+    ol > li, ul > li{
+        text-wrap: pretty;
+        margin: 10px 0;
+    }
+
+    ul > li{
+        list-style: inside;
+    }
+
+    ol > li{
+        display: block;
+        position: relative;
+        margin-top: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+        padding: 10px;
+        -webkit-backdrop-filter: blur(21px);
+        backdrop-filter: blur(21px);
+        border: 1px solid #0118061e;
+    }
+
+
+    h1{
+        color: white;
+    }
+
+    h3{
+        padding: 20px 10px;
+        border-bottom: 1px solid #011806 ;
+    }
+
+    figure{
+        display: block;
+        width: 70%;
+    }
+
+    figure img{
+        width: 100%;
+    }
+
+    section > p{
+        text-align: center;
+        margin: 20px;
+    }
+
+    @media (width > 700px){
+        figure{
+            width: 20%;
+        }
+
+        section::after{
+            height: 35em;
+        }
+        
+        main{
+            width: 50%;
+        }
+
+        
+
+        h1{
+            margin: 1em 0;
+            font-size: 1.9em;
+            text-transform: uppercase;
+            border-bottom: 1px solid white;
+        }
+
+        h3{
+            font-size: 1.6em;
+        }
+
+        ul > li{
+            font-size: 1.3em;
+        }
+
+        main > p, section > p{
+            font-size: 1.5em;
+        }
+
+        section > p{
+            width: 40%;
+        }
+
+        ol > li{
+            padding:2em 5em ;
+        }
+
+    }
+</style>

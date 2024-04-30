@@ -6,6 +6,8 @@ const phoneContact = contacts.find(
 
 const phoneContact1 = phoneContact.contact[0];
 
+export const PHONE = phoneContact1;
+
 export const TEXT = (tipo, peso) => {
   if (tipo && peso) {
     const TEXT = `Hola,%20👋%20vengo%20de%20la%20página%20www.dleite.com,%20me%20interesa%20el%20*Yogurt%20${tipo}%20de%20${
@@ -17,8 +19,6 @@ export const TEXT = (tipo, peso) => {
 
     return TEXT;
   } else {
-    console.error("TEXT carece de parámetros (Tipo o Peso)");
+    console.error("'TEXT' carece de parámetros (Tipo y/o Peso)");
   }
 };
-
-export const PHONE = phoneContact1;

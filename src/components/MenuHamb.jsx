@@ -42,8 +42,12 @@ export function MenuHamb() {
             </a>
           </li>
           <li>
-            <a href="#" title="políticas y términos" target="_blank">
-              Políticas y términos
+            <a
+              href="/Politicas-y-Terminos"
+              title="políticas y términos"
+              target="_blank"
+            >
+              Políticas y términos de uso
             </a>
           </li>
           <li>
