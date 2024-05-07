@@ -3,7 +3,7 @@
     "id": 1,
     "socialNetwork": "Facebook",
     "userName": "Dleite - Yogures Naturales",
-    "online": true,
+    "online": false,
     "contact": ["Messenger, mensaje directo"],
     "image": "../public/contact/facebook.png",
     "image2": "../public/contact/facebook-white.png",
@@ -16,14 +16,17 @@
     "online": true,
     "contact": ["Messenger, mensaje directo"],
     "image": "../public/contact/instagram.png",
-    "image2": "../public/contact/instagram-white.png"
+    "image2": "../public/contact/instagram-white.png",
+    "url": "https://www.instagram.com/d_leite_al_natural?igsh=MXR3dTgwOXoxdW1oaQ=="
+
+    
   },
   {
     "id": 3,
     "socialNetwork": "WhatsApp",
     "userName": "",
     "online": true,
-    "contact": ["541140230671"],
+    "contact": ["5493885764074", "5493884074219"],
     "image": "../public/contact/whatsapp.png",
     "image2": "../public/contact/whatsapp-white.png",
     "url": "#"
@@ -51,9 +54,9 @@
   {
     "id": 6,
     "socialNetwork": "Email",
-    "userName": "ginociancia10@gmail.com",
+    "userName": "sofi16s07s02@gmail.com",
     "online": true,
-    "contact": ["ginociancia10@gmail.com"],
+    "contact": ["sofi16s07s02@gmail.com"],
     "image": "../public/contact/correo.png",
     "image2": "../public/contact/correo-white.png",
     "url": "#"

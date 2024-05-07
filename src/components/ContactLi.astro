@@ -1,14 +1,17 @@
 ---
 const { contact, width, height, color } = Astro.props;
+import {handlerSocialMedia} from '../../Logic/handlerSocialMedia.js'
 ---
 
 <li class="contact-socialmedia" id={`${contact.id}`}>
-  <a
-    href={contact.url}
+{  <a
+    href={handlerSocialMedia(contact)}
     style={`width:${width}; height:${height}; background-color: ${color};`}
+    target="_blank"
+    title={`Redirigir a ${contact.socialNetwork}`}
   >
     <img src={contact.image2} alt={`${contact.socialNetwork} icon`} />
-  </a>
+  </a>}
 </li>
 
 <style>
@@ -22,7 +25,6 @@ const { contact, width, height, color } = Astro.props;
   .contact-socialmedia > a > img {
     width: 60%;
     object-fit: contain;
-    color: white;
   }
 
   .contact-socialmedia > a:hover {

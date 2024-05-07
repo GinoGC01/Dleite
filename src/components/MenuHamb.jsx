@@ -50,11 +50,11 @@ export function MenuHamb() {
               Políticas y términos de uso
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#" title="Testimonios" target="_blank">
               Testimonios
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="/BlogTemp" title="Blog" target="_blank">
               Blog

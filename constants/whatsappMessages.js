@@ -22,3 +22,9 @@ export const TEXT = (tipo, peso) => {
     console.error("'TEXT' carece de parámetros (Tipo y/o Peso)");
   }
 };
+
+export const DEFAULTEXT = () => {
+  const defaultText =
+    "Hola 🖐, vengo de la página de D'leite, me interesa saber sobre los productos! 😁";
+  return defaultText;
+};
