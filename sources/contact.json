@@ -13,7 +13,7 @@
     "id": 2,
     "socialNetwork": "Instagram",
     "userName": "Dleite - Yogures Naturales",
-    "online": false,
+    "online": true,
     "contact": ["Messenger, mensaje directo"],
     "image": "../public/contact/instagram.png",
     "image2": "../public/contact/instagram-white.png"
@@ -32,7 +32,7 @@
     "id": 4,
     "socialNetwork": "Telegram",
     "userName": "@dleiteNatural",
-    "online": true,
+    "online": false,
     "contact": ["1140230671"],
     "image": "../public/contact/telegrama.png",
     "image2": "../public/contact/telegrama-white.png",
